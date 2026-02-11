@@ -7,11 +7,10 @@ import OrbitingLines from "@/components/ui/orbiting-lines";
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen flex flex-col lg:flex-row justify-center items-center px-6 py-20 gap-12">
+    <section id="about"  className="relative min-h-screen flex flex-col lg:flex-row justify-center items-center px-6 py-20 gap-12">
       <AnimatedGrid />
       <Particles className="opacity-40" />
 
-      {/* Text Content */}
       <div className="flex flex-col items-center lg:items-start text-center lg:text-left max-w-2xl">
         <Reveal delay={0.2}>
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight mb-6">
@@ -23,7 +22,7 @@ export default function HeroSection() {
         <Reveal delay={0.4}>
           <div className="mt-4 text-gray-300 text-lg md:text-xl leading-relaxed">
             <TypingAnimation
-              text="Full Stack Developer passionate about building modern web applications with React, TypeScript, and scalable backend systems. I craft beautiful, performant experiences that users love."
+              text="Full Stack Developer and DevOps Engineer with 3 years of experience building, deploying, and scaling modern web applications. I enjoy crafting reliable backend systems, intuitive user interfaces, and smooth CI/CD workflows that make products fast, secure, and easy to maintain."
               duration={30}
             />
           </div>
@@ -50,7 +49,7 @@ export default function HeroSection() {
         <Reveal delay={0.8}>
           <div className="flex gap-6 mt-10">
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/gopavarapukrishnakarthik"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 rounded-full border border-white/20 hover:border-yellow-400 hover:bg-yellow-400/10 transition-all duration-300 hover:scale-110"
@@ -60,7 +59,7 @@ export default function HeroSection() {
             </a>
 
             <a
-              href="https://linkedin.com/in/yourusername"
+              href="https://www.linkedin.com/in/gopavarapukrishnakarthik/"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 rounded-full border border-white/20 hover:border-yellow-400 hover:bg-yellow-400/10 transition-all duration-300 hover:scale-110"
@@ -70,7 +69,7 @@ export default function HeroSection() {
             </a>
 
             <a
-              href="mailto:your.email@example.com"
+              href="mailto:gkkarthik2021@gmail.com"
               className="p-3 rounded-full border border-white/20 hover:border-yellow-400 hover:bg-yellow-400/10 transition-all duration-300 hover:scale-110"
               aria-label="Email"
             >
@@ -80,19 +79,20 @@ export default function HeroSection() {
         </Reveal>
 
         <Reveal delay={1}>
+          <div className="mt-12">
           <a
-            href="/resume.pdf"
+             href={`${import.meta.env.BASE_URL}resume.pdf`}
             download
             className="mt-8 px-6 py-3 rounded-xl border border-white/30 text-white/80 hover:border-yellow-400 hover:text-yellow-400 transition-all duration-300 text-sm font-medium"
           >
             Download Resume ↓
           </a>
+          </div>
         </Reveal>
       </div>
 
-      {/* Orbiting Image */}
       <Reveal delay={0.3}>
-        <div className="flex-shrink-0">
+        <div className="shrink-0 ml-14">
           <OrbitingLines 
             imageSrc="/portfolio/image.png" 
             imageAlt="Krishna Karthik"

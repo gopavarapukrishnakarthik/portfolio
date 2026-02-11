@@ -8,7 +8,6 @@ export default function Navbar() {
          Krishna.dev
         </h2>
 
-        {/* Desktop Links */}
         <div className="hidden md:flex gap-8 text-sm text-gray-300">
           <a href="#about" className="hover:text-yellow-400 transition">
             About
@@ -24,7 +23,6 @@ export default function Navbar() {
           </a>
         </div>
 
-        {/* Mobile Menu */}
         <MobileMenu />
       </div>
     </nav>

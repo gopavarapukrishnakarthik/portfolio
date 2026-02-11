@@ -2,16 +2,16 @@ import Reveal from "@/components/ui/reveal";
 
 const experiences = [
   {
-    role: "Frontend Developer Intern",
-    company: "Tech Company",
-    year: "2023",
-    desc: "Built responsive UI dashboards using React + Tailwind.",
+    role: "DevOps Engineer",
+    company: "Enterprise Projects",
+    year: "Apr 2023 – Mar 2024",
+    desc: "Managed Kubernetes clusters ensuring high availability and performance. Automated CI/CD pipelines using Jenkins and Git, supported containerized applications with Docker, and assisted with AWS infrastructure (EKS, EC2, S3).",
   },
   {
     role: "Full Stack Developer",
-    company: "Recruitment Platform Project",
-    year: "2024",
-    desc: "Developed candidate tracking + interview scheduling system.",
+    company: "Product & Platform Development",
+    year: "Mar 2024 – Present",
+    desc: "Developing internal HR systems and Krishi-CHC, a digital Custom Hiring Center platform for FPOs. Designed and built a scalable backend using Node.js, Express, PostgreSQL, and Drizzle ORM, while creating modern React-based UIs with TypeScript, Tailwind CSS, and Shadcn/UI.",
   },
 ];
 
@@ -21,18 +21,20 @@ export default function Timeline() {
       <Reveal>
         <h2 className="text-4xl font-bold mb-10">Experience</h2>
 
-        <div className="space-y-8 border-l border-white/20 pl-6">
+        <div className="space-y-10 border-l border-white/20 pl-6">
           {experiences.map((exp, i) => (
             <div key={i} className="relative">
-              <span className="absolute -left-[10px] top-2 w-4 h-4 rounded-full bg-yellow-400" />
+              <span className="absolute -left-6 top-2 w-4 h-4 rounded-full bg-yellow-400" />
 
-              <h3 className="text-xl font-semibold text-yellow-400">
+              <h3 className="text-xl md:text-2xl font-semibold text-yellow-400">
                 {exp.role}
               </h3>
-              <p className="text-gray-400 text-sm">
+              <p className="text-gray-400 text-sm mt-1">
                 {exp.company} • {exp.year}
               </p>
-              <p className="mt-2 text-gray-500">{exp.desc}</p>
+              <p className="mt-3 text-gray-500 leading-relaxed">
+                {exp.desc}
+              </p>
             </div>
           ))}
         </div>
