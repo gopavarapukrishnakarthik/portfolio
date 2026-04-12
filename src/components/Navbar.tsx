@@ -5,7 +5,7 @@ export default function Navbar() {
     <nav className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-6xl">
       <div className="flex items-center justify-between px-6 py-4 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl shadow-lg shadow-black/20">
         {/* Logo */}
-        <h2 className="font-bold text-xl tracking-wide text-pink-300">KK</h2>
+        <h2 className="font-bold text-xl tracking-wide text-yellow-300">KK</h2>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8 text-sm text-gray-300 font-medium">
