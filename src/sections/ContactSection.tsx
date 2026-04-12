@@ -18,7 +18,7 @@ export default function ContactSection() {
   const whatsappNumber = "919490998088";
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     setFormData((prev) => ({
       ...prev,
@@ -118,7 +118,7 @@ ${message}
 `;
 
     const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-      whatsappMessage
+      whatsappMessage,
     )}`;
 
     window.open(whatsappURL, "_blank");
@@ -128,11 +128,10 @@ ${message}
     <section id="contact" className="py-20 md:py-28 max-w-5xl mx-auto px-6">
       <Reveal>
         <div className="mb-12 text-center">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">
-            Get In Touch
-          </h2>
+          <h2 className="text-3xl md:text-5xl font-bold mb-4">Get In Touch</h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Have a project in mind or want to collaborate? I would love to hear from you.
+            Have a project in mind or want to collaborate? I would love to hear
+            from you.
           </p>
         </div>
 
@@ -142,9 +141,7 @@ ${message}
               <Mail className="w-7 h-7 text-yellow-400" />
             </div>
             <h3 className="font-semibold text-lg mb-2">Email</h3>
-            <p className="text-sm text-gray-400">
-              gkkarthik2021@gmail.com
-            </p>
+            <p className="text-sm text-gray-400">gkkarthik2021@gmail.com</p>
           </div>
 
           <div className="flex flex-col items-center p-6 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 border border-white/10">
@@ -152,9 +149,7 @@ ${message}
               <Phone className="w-7 h-7 text-green-400" />
             </div>
             <h3 className="font-semibold text-lg mb-2">WhatsApp</h3>
-            <p className="text-sm text-gray-400">
-              +91 9490998088
-            </p>
+            <p className="text-sm text-gray-400">+91 9490998088</p>
           </div>
 
           <div className="flex flex-col items-center p-6 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 border border-white/10">
@@ -162,13 +157,11 @@ ${message}
               <MapPin className="w-7 h-7 text-yellow-400" />
             </div>
             <h3 className="font-semibold text-lg mb-2">Location</h3>
-            <p className="text-sm text-gray-400">
-              Vijayawada, AP
-            </p>
+            <p className="text-sm text-gray-400">Vijayawada, AP</p>
           </div>
         </div>
 
-      <ShineBorder>
+        <ShineBorder>
           <form className="space-y-6" onSubmit={handleSubmit}>
             {["name", "email", "phone", "subject"].map((field) => (
               <div key={field}>
@@ -185,9 +178,7 @@ ${message}
                   } focus:border-yellow-400 outline-none`}
                 />
                 {errors[field] && (
-                  <p className="text-red-500 text-sm mt-1">
-                    {errors[field]}
-                  </p>
+                  <p className="text-red-500 text-sm mt-1">{errors[field]}</p>
                 )}
               </div>
             ))}
@@ -206,17 +197,14 @@ ${message}
                 } focus:border-yellow-400 outline-none`}
               />
               {errors.message && (
-                <p className="text-red-500 text-sm mt-1">
-                  {errors.message}
-                </p>
+                <p className="text-red-500 text-sm mt-1">{errors.message}</p>
               )}
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <button
                 type="submit"
-                className="flex items-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-6 py-3 rounded-xl transition-all duration-300"
-              >
+                className="flex items-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-6 py-3 rounded-xl transition-all duration-300">
                 <Mail size={18} />
                 Send Email
               </button>
@@ -224,8 +212,7 @@ ${message}
               <button
                 type="button"
                 onClick={handleWhatsAppSend}
-                className="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300"
-              >
+                className="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300">
                 <Send size={18} />
                 Send WhatsApp
               </button>

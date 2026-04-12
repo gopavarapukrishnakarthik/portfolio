@@ -5,31 +5,56 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
-    title: "HR Portal Website",
-    desc: "Internal recruitment and HR management platform with authentication and role-based access. Includes job postings, candidate tracking, employee management, leave and payroll handling, and office workflow automation.",
+    title: "AquaSupply – Fertilizer Booking & Inventory Platform",
+    desc: "A web and mobile application designed for agri-fertilizer shops and farmers. Shop owners can manage inventory and stock levels, while farmers can locate nearby stores and book fertilizers through both web and mobile interfaces with real-time availability.",
     tech: [
       "React",
-      "JavaScript",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "Redux",
-      "Tailwind CSS",
-      "Shadcn/UI",
+      "TypeScript",
+      "Vite",
+      "React Query",
+      "Axios",
+      "Leaflet",
+      "React Native",
+      "Expo",
+      "NativeWind",
+      "Zustand",
+      "React Native Maps",
     ],
   },
   {
-    title:  "Krishi-CHC portal",
-    desc: "A digital Custom Hiring Center (CHC) platform enabling farmers within FPOs to manage agricultural machinery, bookings, and crop-related operations via a web application.",
+    title: "AquaDrop – Water Delivery E-Commerce Platform",
+    desc: "A full-stack e-commerce platform for seamless water can and bottle delivery. Customers can browse products, add items to cart, place and track orders, while admins manage products, update inventory, and monitor sales analytics through an interactive dashboard.",
     tech: [
-      "Node.js",
-      "Express.js",
+      "React",
       "TypeScript",
-      "PostgreSQL",
-      "Drizzle ORM",
-      "Zod",
-      "REST APIs",
+      "Vite",
+      "Redux Toolkit",
+      "React Router DOM",
+      "Firebase",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "Recharts",
+      "Lucide React",
     ],
+    github: "https://github.com/gopavarapukrishnakarthik/aquadrop",
+    demo: "https://gopavarapukrishnakarthik.github.io/aquadrop/#/login",
+  },
+  {
+    title: "TripWise – Route Planning Application",
+    desc: "Interactive trip planning application with map-based routing and stop management. Supports driving, walking, and cycling routes using open-source mapping and routing services.",
+    tech: [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "Zustand",
+      "MapLibre",
+      "OpenStreetMap",
+      "OSRM",
+    ],
+    github: "https://github.com/gopavarapukrishnakarthik/Tripwise",
+    demo: "https://gopavarapukrishnakarthik.github.io/Tripwise/",
   },
   {
     title: "Fitpulse",
@@ -52,21 +77,31 @@ const projects = [
     demo: "https://gopavarapukrishnakarthik.github.io/fitpulse/",
   },
   {
-    title: "TripWise – Route Planning Application",
-    desc: "Interactive trip planning application with map-based routing and stop management. Supports driving, walking, and cycling routes using open-source mapping and routing services.",
+    title: "Krishi-CHC portal",
+    desc: "A digital Custom Hiring Center (CHC) platform enabling farmers within FPOs to manage agricultural machinery, bookings, and crop-related operations via a web application.",
+    tech: [
+      "Node.js",
+      "Express.js",
+      "TypeScript",
+      "PostgreSQL",
+      "Drizzle ORM",
+      "Zod",
+      "REST APIs",
+    ],
+  },
+  {
+    title: "HR Portal Website",
+    desc: "Internal recruitment and HR management platform with authentication and role-based access. Includes job postings, candidate tracking, employee management, leave and payroll handling, and office workflow automation.",
     tech: [
       "React",
-      "TypeScript",
-      "Vite",
+      "JavaScript",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Redux",
       "Tailwind CSS",
-      "shadcn/ui",
-      "Zustand",
-      "MapLibre",
-      "OpenStreetMap",
-      "OSRM",
+      "Shadcn/UI",
     ],
-    github: "https://github.com/gopavarapukrishnakarthik/Tripwise",
-    demo: "https://gopavarapukrishnakarthik.github.io/Tripwise/",
   },
 ];
 
@@ -94,8 +129,7 @@ export default function ProjectsSection() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                viewport={{ once: true }}
-              >
+                viewport={{ once: true }}>
                 <ShineBorder className="h-full">
                   <div className="space-y-6 h-full flex flex-col">
                     <div>
@@ -121,8 +155,7 @@ export default function ProjectsSection() {
                       {p.tech.map((t, idx) => (
                         <span
                           key={idx}
-                          className="px-4 py-1.5 text-sm rounded-full bg-yellow-400/10 text-yellow-400 border border-yellow-400/30 font-medium"
-                        >
+                          className="px-4 py-1.5 text-sm rounded-full bg-yellow-400/10 text-yellow-400 border border-yellow-400/30 font-medium">
                           {t}
                         </span>
                       ))}
@@ -135,8 +168,7 @@ export default function ProjectsSection() {
                             href={p.github}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center gap-2 text-base text-gray-300 hover:text-yellow-400 transition-colors duration-300 font-medium"
-                          >
+                            className="flex items-center gap-2 text-base text-gray-300 hover:text-yellow-400 transition-colors duration-300 font-medium">
                             <Github size={20} />
                             View Code
                           </a>
@@ -147,8 +179,7 @@ export default function ProjectsSection() {
                             href={p.demo}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center gap-2 text-base text-gray-300 hover:text-yellow-400 transition-colors duration-300 font-medium"
-                          >
+                            className="flex items-center gap-2 text-base text-gray-300 hover:text-yellow-400 transition-colors duration-300 font-medium">
                             <ExternalLink size={20} />
                             Live Demo
                           </a>
